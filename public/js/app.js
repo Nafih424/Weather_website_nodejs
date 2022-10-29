@@ -1,6 +1,5 @@
 // const { response } = require("express");
 
-console.log("hello")
 
 
 
