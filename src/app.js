@@ -13,6 +13,7 @@ const stat_path = path.join(__dirname,"../public")
 const X = path.join(__dirname,"../templates/partials")
 
 const app = express()
+const port = process.env.PORT || 3000
 
 app.set("view engine", "hbs")
 app.set("views",path.join(__dirname,"../templates/views"))
@@ -87,6 +88,6 @@ app.get("*", (req,res)=>{
     })
 })
 
-app.listen(3000, ()=>{
-    console.log("port is running on 3000");
+app.listen(port, ()=>{
+    console.log(port);
 })

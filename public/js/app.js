@@ -3,7 +3,6 @@
 
 
 
-
 const weather = document.querySelector("form")
 const search = document.querySelector('input')
 const message_one = document.querySelector("#message_one")
@@ -16,7 +15,7 @@ const message_two = document.querySelector("message_two")
 weather.addEventListener("submit", (e)=>{
     e.preventDefault()
     const location = search.value
-    let url = "http://localhost:3000/weather?location=" + location
+    let url = "/weather?location=" + location
     console.log(location.length);
     fetch(url).then((response)=>{
         response.json().then((data)=>{
